@@ -1,6 +1,6 @@
 # Introduce
 
-To mount the usb devices in docker swarm mode.
+To mount the usb devices in docker swarm mode. The test usb device is HID device, and run the HID device on edgex-csdk-test image.
 
 ## .rules
 
