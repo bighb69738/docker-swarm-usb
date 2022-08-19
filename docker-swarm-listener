@@ -1,0 +1,9 @@
+#!/bin/bash
+docker events --filter "image=$2" --filter "event=start"| \
+while read line; do
+  # Notify user when event is received
+  echo
+  echo "Detected a container was launched on this host with image: $2"
+  # Set the permissions on the container to access USB device
+  /usr/local/bin/docker-swarm-enable-usb $1 $2
+done
