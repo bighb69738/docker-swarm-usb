@@ -30,6 +30,17 @@ Follow these instructions and remember to `sudo su` before the command to run it
 
     $ sudo su
     $ /usr/local/bin/docker-swarm-listener <device_symlink_path> <image_name> &
+    
+## Flow
+1. 先安裝 make install
+2. worker node 也需要 load device service image 
+3. 執行`/usr/local/bin/docker-swarm-listener /dev/my_usb edgex-csdk-test:latest &` 
+4. 由 docker manager 執行 docker stack deploy
+5. 插上usb device
+6.terminal 顯示 
+> Detected a container was launched on this host with image: edgex-csdk-test:latest
+
+> Setting permissions to access /dev/my_usb for container edgex-csdk-test:latest
 
 ## Uninstalling
 
