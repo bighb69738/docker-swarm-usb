@@ -1,4 +1,4 @@
-PREFIX = /root
+PREFIX = /usr/local/bin
 
 .PHONY: info install uninstall
 
